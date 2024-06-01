@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.MainPage"
+             xmlns:rootBeer="clr-namespace:RootBeerFresh;assembly=RootBeerFresh"
+             xmlns:local="clr-namespace:SampleApp"
+             x:DataType="local:MainPageViewModel">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    <Grid Padding="30">
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,50" HorizontalOptions="Fill" >
+                <Label Text="Test"/>
+                <Label FontSize="16" FontAttributes="Bold" Text="Found" Grid.Column="1"/>
+            </Grid>
+            <ListView VerticalOptions="Fill" HorizontalOptions="Fill"
+                      ItemsSource="{Binding ItemResults}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="rootBeer:RootItemResult">
+                        <ViewCell>
+                            <ContentView>
+                                <Grid ColumnDefinitions="*,50">
+                                    <Label Text="{Binding Text}" Grid.Column="0" FontSize="16" FontAttributes="Bold" />
+                                    <Label Text="{Binding IsSuspicious}" Grid.Column="1" FontSize="16" FontAttributes="Bold" />
+                                </Grid>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+
+
+        <Label Text="ROOTED*"
+               FontSize="50" FontAttributes="Bold" TextColor="Red"
+               VerticalOptions="Center" HorizontalOptions="Center" IsVisible="{Binding IsRooted}"/>
+
+        <Label Text="NON ROOTED*" 
+               FontSize="50" FontAttributes="Bold" TextColor="Green"
+               VerticalOptions="Center" HorizontalOptions="Center" IsVisible="{Binding IsNotRooted}"/>
+
+        <Button Text="CHECK FOR ROOT" 
+                HeightRequest="50" 
+                WidthRequest="100" Command="{Binding CheckForRootCommand}"
+                HorizontalOptions="End" VerticalOptions="End"/>
+
+
+    </Grid>
+
+</ContentPage>
