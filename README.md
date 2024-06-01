@@ -1,7 +1,7 @@
 # MAUI-rootbeerFresh
  A binding project for rootbeerFresh by @KimChangYoun
 
-![Sample](https://raw.githubusercontent.com/Jon2G/RootbeerFresh-MAUI/main/screenshot.jpeg)
+![Sample](https://raw.githubusercontent.com/Jon2G/RootbeerFresh-MAUI/main/Screenshot.jpeg)
 
 Usage:
 ```
