@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!--<TargetFramework>net8.0-android</TargetFramework>-->
+		<TargetFrameworks>net6.0-android;net7.0-android;net8.0-android</TargetFrameworks>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<CheckEolWorkloads>false</CheckEolWorkloads>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>FlipView-MAUI</Title>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Jon2G/RootbeerFresh-MAUI</RepositoryUrl>
+		<PackageTags>MAUI,ROOT,ROOTBEER,ANDROID,MAGISK,SECURITY</PackageTags>
+		<NeutralLanguage>en</NeutralLanguage>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageId>$(AssemblyName)-MAUI</PackageId>
+		<PackageProjectUrl>https://github.com/Jon2G/RootbeerFresh-MAUI</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageIconUrl>https://raw.githubusercontent.com/Jon2G/RootbeerFresh-MAUI/main/logo</PackageIconUrl>
+		<Description>
+			A binding project for rootbeerFresh by @KimChangYoun https://github.com/KimChangYoun/rootbeerFresh
+		</Description>
+		<Copyright>none</Copyright>
+		<Version>1.0.1</Version>
+	</PropertyGroup>
+	<ItemGroup>
+		<AndroidLibrary Update="LibRootbeerFresh-debug.aar" Bind="true" />
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>
