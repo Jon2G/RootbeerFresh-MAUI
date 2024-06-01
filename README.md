@@ -1,6 +1,8 @@
 # MAUI-rootbeerFresh
  A binding project for rootbeerFresh by @KimChangYoun
 
+ [![NuGet version (RootBeerFresh-MAUI)](https://img.shields.io/nuget/v/RootBeerFresh-MAUI.svg)](https://www.nuget.org/packages/RootBeerFresh-MAUI/)
+
 ![Sample](https://raw.githubusercontent.com/Jon2G/RootbeerFresh-MAUI/main/Screenshot.jpeg)
 
 Usage:
