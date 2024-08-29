@@ -4,6 +4,7 @@ using Android.Runtime;
 
 namespace RootBeerFresh
 {
+    [Microsoft.Maui.Controls.Internals.Preserve(AllMembers = true)]
     public partial class RootBeer : Com.Kimchangyoun.RootbeerFresh.RootBeer
     {
         protected RootBeer(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
@@ -19,9 +20,7 @@ namespace RootBeerFresh
 
         }
 
-        public List<RootItemResult> GetRootItemResults()
-        {
-            return new List<RootItemResult>
+        public RootItemResult[] GetRootItemResults() => new RootItemResult[]
             {
                new ("Root Management Apps", this.DetectRootManagementApps()),
                new("Potentially Dangerous Apps", this.DetectPotentiallyDangerousApps()),
@@ -36,7 +35,6 @@ namespace RootBeerFresh
                 new("Magisk specific checks", this.CheckForMagiskBinary()),
                 new("Magisk UDS check", this.CheckForMagiskNative())
             };
-        }
     }
 }
 #endif

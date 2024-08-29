@@ -5,10 +5,13 @@
 		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UseMaui>true</UseMaui>
 		<CheckEolWorkloads>false</CheckEolWorkloads>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Title>FlipView-MAUI</Title>
+		<Title>RootbeerFresh-MAUI</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<MauiDisableTargetsValidation>True</MauiDisableTargetsValidation>
+		<SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
 		<RepositoryUrl>https://github.com/Jon2G/RootbeerFresh-MAUI</RepositoryUrl>
 		<PackageTags>MAUI,ROOT,ROOTBEER,ANDROID,MAGISK,SECURITY</PackageTags>
 		<NeutralLanguage>en</NeutralLanguage>
@@ -25,10 +28,11 @@
 			A binding project for rootbeerFresh by @KimChangYoun https://github.com/KimChangYoun/rootbeerFresh
 		</Description>
 		<Copyright>none</Copyright>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
+		<IsTrimmable>false</IsTrimmable>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<!--<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />-->
 		<AndroidLibrary Update="LibRootbeerFresh-debug.aar" Bind="true" />
 		<None Include="..\LICENSE">
 			<Pack>True</Pack>
