@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<!--<TargetFramework>net8.0-android</TargetFramework>-->
-		<TargetFrameworks>net7.0;net8.0;net7.0-android;net8.0-android</TargetFrameworks>
+		<TargetFrameworks>net8.0;net9.0;net8.0-android;net9.0-android</TargetFrameworks>
 		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -28,7 +28,7 @@
 			A binding project for rootbeerFresh by @KimChangYoun https://github.com/KimChangYoun/rootbeerFresh
 		</Description>
 		<Copyright>none</Copyright>
-		<Version>1.0.3</Version>
+		<Version>1.0.4</Version>
 		<IsTrimmable>false</IsTrimmable>
 	</PropertyGroup>
 	<ItemGroup>
