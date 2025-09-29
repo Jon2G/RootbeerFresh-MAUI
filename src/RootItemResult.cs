@@ -1,7 +1,7 @@
 ﻿
 namespace RootBeerFresh
 {
-    [Microsoft.Maui.Controls.Internals.Preserve(AllMembers = true)]
+    [Preserve(AllMembers = true)]
     public class RootItemResult
     {
         public string Text { get; set; }

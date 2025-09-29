@@ -4,7 +4,7 @@ using Android.Runtime;
 
 namespace RootBeerFresh
 {
-    [Microsoft.Maui.Controls.Internals.Preserve(AllMembers = true)]
+    [Preserve(AllMembers = true)]
     public partial class RootBeer : Com.Kimchangyoun.RootbeerFresh.RootBeer
     {
         protected RootBeer(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)

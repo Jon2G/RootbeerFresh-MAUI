@@ -1,5 +1,5 @@
-﻿using RootBeerFresh;
-using System.Windows.Input;
+﻿using System.Windows.Input;
+using RootBeerFresh;
 
 namespace SampleApp
 {
@@ -14,7 +14,7 @@ namespace SampleApp
     public class MainPageViewModel : BindableObject
     {
         public ICommand CheckForRootCommand { get; }
-        public List<RootItemResult> ItemResults { get; set; }
+        public List<RootItemResult>? ItemResults { get; set; }
         public bool IsRooted { get; set; } = false;
         public bool IsNotRooted { get; set; } = false;
         public MainPageViewModel()
@@ -26,7 +26,7 @@ namespace SampleApp
         {
 #if ANDROID
             RootBeer rootBeer = new RootBeer();
-            this.ItemResults = rootBeer.GetRootItemResults();
+            this.ItemResults = rootBeer.GetRootItemResults().ToList();
             OnPropertyChanged(nameof(ItemResults));
             this.IsRooted = rootBeer.IsRooted;
             this.IsNotRooted = !rootBeer.IsRooted;
